@@ -192,7 +192,6 @@ margin: 0 100px;
   background-color: var(--main-gold);
   font-size: 20px;
 }
-
 /*------------ BREW-CONTAINERS--general-styling ---------- */
 
 .brews-container{
@@ -219,10 +218,8 @@ margin: 0 100px;
   padding: 10px 10px 55px 10px;
   margin: 20px;
   border-radius: 5px;
-  /* color: var(--main-dark-gold); */
   background-color: var(--translucent-white);
 	backdrop-filter: blur(5px);
-  /* border: solid var(--main-dark-gold) 3px; */
 }
 
 .brew-card p{
@@ -239,14 +236,12 @@ margin: 0 100px;
 }
 /*------------ MY BREWS---------- */
 .my-brews-container{
-  background-image: url("../breweryTomfooleryPics/beerFireplace.jpg");
-  background-position: top -20% right 0%;
-  /* background-position: center; */
+  background-image: url("../breweryTomfooleryPics/lightBeer.jpg");
+  background-position: top 30% right 0%;
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;
   overflow-y: scroll;
-  /* padding: 50px 50px; */
   height: 100vh;
   width: 100vw;
   max-width: 1500px;
@@ -259,7 +254,6 @@ margin: 0 100px;
 }
 
 .delete-btn{
-  /* margin-left: auto; */
   position:absolute;
   bottom: 10px;
   right: 15px;
