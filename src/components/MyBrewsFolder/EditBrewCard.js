@@ -9,7 +9,7 @@ const EditBrewCard = ({ editFormData, setEditFormData }) => {
 
   //get specific entry to populate update form
   useEffect(() => {
-    fetch(`http://localhost:9292/api/entries/entry-id/${params.id}`)
+    fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries/entry-id/${params.id}`)
       .then((res) => res.json())
       .then((entry) => {
          setEditFormData(entry)
@@ -31,7 +31,7 @@ const EditBrewCard = ({ editFormData, setEditFormData }) => {
  const handleUpdateSubmit = (e) => {
     e.preventDefault();
     
-    fetch(`http://localhost:9292/api/entries/entry-id/${params.id}`,{
+    fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries/entry-id/${params.id}`,{
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

@@ -12,7 +12,7 @@ const GlobalBrewCard = ({userName, entry_id, name, image, location, description,
     const handleFavorite = () => {
 
         if (!isFavorited) {
-            fetch("http://localhost:9292/api/favorites", {
+            fetch("https://frozen-everglades-90720.herokuapp.com/api/favorites", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"

@@ -7,7 +7,7 @@ const FavoriteBrews = ({id,search,setSearch}) => {
 
     //get favorites for specific user
     useEffect(() => {
-        fetch(`http://localhost:9292/api/favorited_entries/users/${id}`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/favorited_entries/users/${id}`)
         .then(res => res.json())
         .then(data => {
             setSearch("")

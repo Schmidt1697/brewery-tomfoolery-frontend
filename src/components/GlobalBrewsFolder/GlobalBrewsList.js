@@ -8,7 +8,7 @@ const GlobalBrewsList = ({currentId,search,setSearch}) => {
 
      //get usernames and associated id's  
      useEffect(() => {
-        fetch(`http://localhost:9292/api/users`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/users`)
         .then(res => res.json())
         .then(data => {
             setUsers(data)
@@ -18,7 +18,7 @@ const GlobalBrewsList = ({currentId,search,setSearch}) => {
 
     //get all entries
     useEffect(() => {
-        fetch(`http://localhost:9292/api/entries`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries`)
         .then(res => res.json())
         .then(data => {
             setSearch("")
@@ -29,7 +29,7 @@ const GlobalBrewsList = ({currentId,search,setSearch}) => {
 
     //get data from favorites saved to a user
     useEffect(() => {
-        fetch(`http://localhost:9292/api/favorited_entries/users/${currentId}`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/favorited_entries/users/${currentId}`)
         .then(res => res.json())
         .then(data => {
             setFavorites(data)

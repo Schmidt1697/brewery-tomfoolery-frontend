@@ -12,7 +12,7 @@ const BrewCard = ({handleDeleteBrew,user_id, entry_id, checkFavoritedId, name,im
     const handleFavorite = () => {
 
         if (!isFavorited) {
-            fetch("http://localhost:9292/api/favorites", {
+            fetch("https://frozen-everglades-90720.herokuapp.com/api/favorites", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
@@ -27,7 +27,7 @@ const BrewCard = ({handleDeleteBrew,user_id, entry_id, checkFavoritedId, name,im
 
     // Deleting a brew logic:
     function handleDeleteClick(id){
-      fetch(`http://localhost:9292/api/entries/entry-id/${id}`,{
+      fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries/entry-id/${id}`,{
       method: "DELETE",
       })
       handleDeleteBrew(id);

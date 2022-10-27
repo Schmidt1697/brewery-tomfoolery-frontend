@@ -5,7 +5,7 @@ const Login = ({setToken, setUser, setCurrentId}) => {
     const [formData, setForm] = useState("")                                                                                                                                    
 
     useEffect(() => {
-        fetch(`http://localhost:9292/api/users`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/users`)
         .then(res => res.json())
         .then(data => {
           setUsers(data)
@@ -23,7 +23,7 @@ const Login = ({setToken, setUser, setCurrentId}) => {
             setUser(formData)
         } 
         else {
-            fetch(`http://localhost:9292/api/users/${formData}`, {
+            fetch(`https://frozen-everglades-90720.herokuapp.com/api/users/${formData}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

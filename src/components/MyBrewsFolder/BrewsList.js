@@ -6,7 +6,7 @@ const BrewsList = ({currentId, filterMyBrewsCards, handleDeleteBrew}) => {
     
     //get data from favorites saved to a user
       useEffect(() => {
-        fetch(`http://localhost:9292/api/favorited_entries/users/${currentId}`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/favorited_entries/users/${currentId}`)
         .then(res => res.json())
         .then(data => {
           setFavorites(data)

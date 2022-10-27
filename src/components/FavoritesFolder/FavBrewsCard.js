@@ -4,7 +4,7 @@ const FavBrewsCard = ({onDelete, favDetails}) => {
       //pass in id that is equal to entry_id in the favorite table in the backend
     const handleDelete = (id) => {
           //delete from db
-        fetch(`http://localhost:9292/api/favorited_entries/entry-id/${id}`, {
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/favorited_entries/entry-id/${id}`, {
              method: 'DELETE'
         })
         .then(onDelete(id)) //delete on the front-end list of the app

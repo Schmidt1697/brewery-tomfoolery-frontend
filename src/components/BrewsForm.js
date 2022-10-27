@@ -24,7 +24,7 @@ const BrewsForm = ({id}) => {
     const handleBrewSubmit = (e) => {
         e.preventDefault();
         
-        fetch(`http://localhost:9292/api/entries/user/${id}`, {
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries/user/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

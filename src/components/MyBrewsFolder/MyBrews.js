@@ -7,7 +7,7 @@ const MyBrews = ({search,setSearch,id,editFormData}) => {
     const [myBrewsCards,setMyBrewsCards]=useState([])
     
     useEffect(()=>{
-        fetch(`http://localhost:9292/api/entries/user/${id}`)
+        fetch(`https://frozen-everglades-90720.herokuapp.com/api/entries/user/${id}`)
         .then((res) =>res.json())
         .then(data => {
             setSearch("")
