@@ -4,7 +4,7 @@ import FaveBrewsList from './FavBrewsList';
 
 const FavoriteBrews = ({id,search,setSearch}) => {
     const [favorites, setFavorites] = useState([]);
-
+ 
     //get favorites for specific user
     useEffect(() => {
         fetch(`https://frozen-everglades-90720.herokuapp.com/api/favorited_entries/users/${id}`)
@@ -24,7 +24,6 @@ const FavoriteBrews = ({id,search,setSearch}) => {
         } else return false
       })
        
-
       //delete favorite from favorites list
       const handleDeleteFavorite = (id) => {
         const newFavorites = favorites.filter((favorite) => {

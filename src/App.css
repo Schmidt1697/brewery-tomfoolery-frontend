@@ -105,6 +105,7 @@ button:hover{
 /*------------ All pages inside app gen structure  ---------- */
 
 .content-container {
+  width: 100vw;
   max-width: 1500px;
 }
 
@@ -410,4 +411,39 @@ margin: 0 100px;
 
 .favorited{
   background-color: var(--main-gold);
+}
+
+@media screen and (max-width: 675px) {
+  .nav a{
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  .about-photos{
+    flex-direction: column;
+  }
+  .home h1{
+    font-size: 2rem;
+  }
+  .home-intro{
+    padding: 20px 1.5rem;
+  }
+
+  .brew-form{
+    max-height: 30vh;
+  }
+
+  .brew-form-container h2{
+    color: var(--main-plum);
+    font-size: 16px;
+    padding-top: 0;
+  }
+
+  .brew-form{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .edit-container{
+    width: 80vw;
+  }
 }

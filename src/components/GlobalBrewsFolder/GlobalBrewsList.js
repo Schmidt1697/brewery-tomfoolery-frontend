@@ -61,6 +61,7 @@ const GlobalBrewsList = ({currentId,search,setSearch}) => {
         return (
             <GlobalBrewCard 
                 userName={brewCard.username}
+                key={oneBrewsCard.id}
                 entry_id={oneBrewsCard.id} 
                 name={oneBrewsCard.name} 
                 image={oneBrewsCard.image_url} 

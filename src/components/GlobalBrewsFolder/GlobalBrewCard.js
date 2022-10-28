@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
 
 const GlobalBrewCard = ({userName, entry_id, name, image, location, description, checkFavoritedId, currentId}) => {
     const [isFavorited, setIsFavorited] = useState(false);

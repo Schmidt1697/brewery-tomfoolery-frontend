@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Login = ({setToken, setUser, setCurrentId}) => {
+    const history = useHistory();
     const [users, setUsers] = useState([])
     const [formData, setForm] = useState("")                                                                                                                                    
 
@@ -16,11 +18,10 @@ const Login = ({setToken, setUser, setCurrentId}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const usersLowerCase = users.map(element => element.username.toLowerCase())
-        // console.log(users.find(element => element.username.toLowerCase() === formData.toLowerCase()))
-        // console.log(usersLowerCase.includes(formData.toLowerCase())) //returns true or false
         if (usersLowerCase.includes(formData.toLowerCase())) {
             setCurrentId(users.find(element => element.username.toLowerCase() === formData.toLowerCase()).id)
             setUser(formData)
+            history.push('/');
         } 
         else {
             fetch(`https://frozen-everglades-90720.herokuapp.com/api/users/${formData}`, {
@@ -34,11 +35,9 @@ const Login = ({setToken, setUser, setCurrentId}) => {
             .then(data => {
                 setCurrentId(data.id)
                 setUser(formData)
+                history.push('/');
             })
             .catch(err => console.error(err))
-
-            // setCurrentId(users.find(element => element.username.toLowerCase() === formData.toLowerCase()).id)
-            // setUser(formData)
         }
         setToken(true);
     }
@@ -54,10 +53,6 @@ const Login = ({setToken, setUser, setCurrentId}) => {
                 <label>Username</label>
                 <input type="text" value={formData} onChange={handleChange}/>
                 
-                {/* <label>
-                    <p>Password</p>
-                    <input type="password" />
-                </label> */}
                 <div>
                     <button className='submit-btn' type="submit">Log In</button>
                 </div>
