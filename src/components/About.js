@@ -13,7 +13,7 @@ const About = () => {
             </p>
             <h2>Application Coding Details</h2>
             <p>
-                This application utilizes elements of React(JavaScript, CSS & HTML) and Ruby (Active Records), to create a cohesive front end and back end experience. Users data persists to a backend database so that any changes that the user has made (making a username, creating an entry, or favoriting entries from other users) will persist even if the page is refreshed.
+                This application utilizes a React.js frontend and Ruby API built with Sinatra framework for the backend. It is deployed using Netlify and Heroku.
             </p>
             <h2>About the Creators</h2>
             <p>
