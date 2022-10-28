@@ -25,9 +25,6 @@ const MyBrews = ({search,setSearch,id,editFormData}) => {
     })
     
 
-
-
-
     //Logic for deleting a brew:
     function handleDeleteBrew(deleteId){
         const updatedBrewArray=myBrewsCards.filter((oneMyBrewCard) => oneMyBrewCard.id !== deleteId);
